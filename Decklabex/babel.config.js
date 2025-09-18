@@ -5,12 +5,13 @@ module.exports = function (api) {
       [
         'babel-preset-expo',
         {
-          jsxImportSource: undefined,
+          jsxImportSource: '@tamagui/core',
           jsxRuntime: 'automatic',
         },
       ],
     ],
     plugins: [
+      ['@tamagui/babel-plugin', { components: ['tamagui'], disableExtraction: false }],
       // React Native Reanimated plugin must be last
       'react-native-reanimated/plugin',
     ],

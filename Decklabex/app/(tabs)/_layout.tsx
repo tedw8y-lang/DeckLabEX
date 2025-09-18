@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
-import { Search, Grid3x3 as Grid3X3, BookOpen, Camera, TrendingUp, User } from 'lucide-react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   return (
@@ -32,7 +32,7 @@ export default function TabLayout() {
         options={{
           title: 'Search',
           tabBarIcon: ({ color, size }) => (
-            <Search size={size} color={color} />
+            <MaterialCommunityIcons name="magnify" size={size} color={color} />
           ),
         }}
       />
@@ -41,7 +41,7 @@ export default function TabLayout() {
         options={{
           title: 'Collection',
           tabBarIcon: ({ color, size }) => (
-            <Grid3X3 size={size} color={color} />
+            <MaterialCommunityIcons name="view-grid-outline" size={size} color={color} />
           ),
         }}
       />
@@ -50,7 +50,7 @@ export default function TabLayout() {
         options={{
           title: 'Binder',
           tabBarIcon: ({ color, size }) => (
-            <BookOpen size={size} color={color} />
+            <MaterialCommunityIcons name="book-open-variant" size={size} color={color} />
           ),
         }}
       />
@@ -59,7 +59,7 @@ export default function TabLayout() {
         options={{
           title: 'Scanner',
           tabBarIcon: ({ color, size }) => (
-            <Camera size={size} color={color} />
+            <MaterialCommunityIcons name="camera" size={size} color={color} />
           ),
         }}
       />
@@ -68,7 +68,7 @@ export default function TabLayout() {
         options={{
           title: 'Market',
           tabBarIcon: ({ color, size }) => (
-            <TrendingUp size={size} color={color} />
+            <MaterialCommunityIcons name="trending-up" size={size} color={color} />
           ),
         }}
       />
@@ -77,7 +77,7 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color, size }) => (
-            <User size={size} color={color} />
+            <MaterialCommunityIcons name="account-circle" size={size} color={color} />
           ),
         }}
       />
