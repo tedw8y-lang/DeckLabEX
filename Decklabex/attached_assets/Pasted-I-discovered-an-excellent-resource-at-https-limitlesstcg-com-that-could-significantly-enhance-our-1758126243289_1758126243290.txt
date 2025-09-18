@@ -1,0 +1,46 @@
+I discovered an excellent resource at https://limitlesstcg.com/ that could significantly enhance our project. Explore their features for potential integrations and improvements, particularly in data sourcing, tools, and content. Here's a breakdown of key sections from their site:
+
+- Tournament Database: Records results and decklists from major tournaments worldwide, sourcing from official channels like RK9 Labs and Pokémon, or via player contact on social media and at events. Source modern-era data from RK9 Labs in collaboration with organizers; manual collection with global player contributions for other info.
+- Card Database: Covers all Standard and Expanded legal cards with 7 language supports, up-to-date pricing, translated upcoming Japanese cards, and advanced search/filter options.
+- Player Tools: Useful apps for common player tasks and queries.
+- Limitless Blog: Infrequent articles on game topics, updates, and announcements.
+
+Credits and sources include:
+- Scarlet & Violet and newer card images/text from malie.io.
+- Pre-SV images/text from PTCGO and pokemon.com.
+- Japanese cards from pokemon-card.com.
+- Pokémon image sprites from National Icon Dex project (with credits).
+- Energy symbols using PTCG Symbols Font.
+
+Integrate and leverage this site's data, tools, and APIs where possible to enrich our application with accurate, comprehensive Pokémon TCG resources, such as syncing tournament results, card databases, pricing, and translations.
+
+Additionally, develop a robust suggestion and improvement plan:
+1. Research and analyze limitlessTCG.com's features for integration points (e.g., API endpoints for card data or tournament search).
+2. Propose enhancements like adding multi-language support, real-time pricing feeds, and player tool widgets to our project.
+3. Identify gaps in our current system (e.g., incomplete decklists or outdated images) and map how limitlessTCG can fill them.
+4. Outline implementation steps: API integration, data scraping (with permissions), UI improvements for searches/filters, and scheduling for updates.
+5. Measure benefits: Improved user engagement, accuracy, and relevance compared to competitors.
+
+Create a comprehensive documentation folder and index:
+- Folder structure: /docs/
+  - /api-integrations/ (e.g., limitlessTCG APIs, RK9 Labs, images sources).
+  - /improvement-plans/ (detailed plan breakdowns, milestones, risks).
+  - /data-sources/ (credits, attributions, source links like malie.io, pokemon-card.com).
+  - /build-fixes/ (logs of fixes, error tracking).
+  - /user-guides/ (how to use new features from limitlessTCG).
+- Index file (/docs/index.md) listing all subfolders, files, and hyperlinks for quick navigation.
+- Include READMEs in each subfolder with descriptions, dependencies, and update procedures.
+- Ensure documentation is version-controlled and automatically generated from code comments using tools like JSDoc or Typedoc.
+
+Review and maintain all project files:
+- Review codebase for code quality, security (e.g., safe API calls), and alignment with limitedTCG integrations.
+- Implement continuous integration for build fixes: Use verbose TypeScript error checkers (e.g., tsc --noEmit), linting (ESLint for JS/TS), and build error detection.
+- Automate fixes: In a loop, run checks; if errors found, apply auto-fixes (e.g., Prettier for formatting, TypeScript auto-imports); re-run until zero errors. Log all cycles in /docs/build-fixes/.
+- Tools suggestions: CI/CD pipeline with GitHub Actions for automated checks, Yarn for dependency management, and scripts like the fix.sh to handle runs.
+
+Leverage the following previous conversation context to guide implementation:
+- Environment is configured with correct Node.js; fix.sh script updated with version checks.
+- Execution steps: Run ./fix.sh from repo root; monitor for success.
+- Todo list management: Update status for tasks like installing Yarn (npm install -g yarn, verify with yarn -v), re-running fix.sh, and reporting completion.
+- Current completion: Yarn installed and verified; fix.sh re-run successfully; await final summary report.
+- Build on this by incorporating the new integrations into scripts, ensuring fixes account for dependencies from limitlessTCG sources.

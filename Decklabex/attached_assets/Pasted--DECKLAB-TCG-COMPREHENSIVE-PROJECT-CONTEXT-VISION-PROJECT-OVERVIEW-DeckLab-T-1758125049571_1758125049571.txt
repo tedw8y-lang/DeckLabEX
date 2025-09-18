@@ -1,0 +1,854 @@
+
+# 🎴 **DECKLAB TCG - COMPREHENSIVE PROJECT CONTEXT & VISION**
+
+## **PROJECT OVERVIEW**
+
+**DeckLab TCG** is an ambitious Pokemon TCG management platform designed to surpass competitors like Collectr, Rare Candy, and Digitalgrading.ai. The goal is to create the most advanced TCG app that bridges physical collecting and digital innovation.
+
+## **ORIGINAL VISION & REQUIREMENTS**
+
+### **Core Features Needed:**
+1. **Advanced Search Engine**: Real-time Pokemon TCG card search with filters
+2. **Market Data Integration**: Live pricing from TCGPlayer, eBay, CardMarket
+3. **Collection Management**: Digital binder system with drag & drop organization
+4. **AI Assistant**: Voice-controlled "DeckLab AI" for card queries and organization
+5. **Social Platform**: User profiles, posts, trading, community features
+6. **3D Holographic Effects**: Gyroscope-based card viewing with visual effects
+7. **Card Scanning**: Advanced scanning with condition assessment
+8. **Performance**: Fast, responsive, optimized for mobile
+
+### **Technical Requirements:**
+- **Real API Integration**: Pokemon TCG API, market data APIs
+- **Database**: Firebase Firestore for user data, collections, social features
+- **Authentication**: Firebase Auth with user profiles
+- **Performance**: Caching, lazy loading, optimized rendering
+- **UI/UX**: Beautiful gradients, compact design, competitor-level polish
+
+## **CURRENT TECHNICAL STACK**
+
+```typescript
+// Core Framework
+- Expo SDK 52
+- React Native 0.76.3
+- TypeScript with strict typing
+- Redux Toolkit + RTK Query
+
+// Backend & APIs
+- Firebase (Auth, Firestore, Storage)
+- Pokemon TCG API (v2)
+- Market data APIs (TCGPlayer, eBay, CardMarket)
+
+// UI & Performance
+- Expo Linear Gradient
+- React Native Reanimated
+- React Native Gesture Handler
+- React Native Chart Kit
+- Expo Speech & Audio
+
+// Advanced Features
+- Voice Commands (Expo Speech)
+- 3D Effects (Expo Sensors)
+- Drag & Drop (Gesture Handler)
+- Social Features (Firebase)
+```
+
+
+
+**"You are working on DeckLab TCG, a Pokemon TCG management app built with Expo/React Native and TypeScript. The project structure is complete but features are not functional and assets are not loading from the database.**
+
+*
+**GOAL:**
+Transform this from a UI mockup into a fully functional Pokemon TCG app with real data loading, working features, and proper database integration. Focus on making the core functionality work first, then enhance with advanced features.
+
+**Start by fixing the Pokemon TCG API service to make real API calls and load actual card data, then move to Firebase integration for user data and collections.**"
+
+Please assume nothing and even assume the build is not correct, Use Web to look up competitors like, Collectr, digitialgradi.ai, rarecandy, and mintcollect. 
+
+you can use this description to help you but still look at the entire project like you know nothing to be unbiased and ensure completness and perfection 
+
+there should be no place holders or mock data anywhere in this project that was an unbreakable rule i should inform you of. also insure you did not take away any functionality or downgraded my app build in any way. this is a very complex app and deserve attention to detail. I need you to include in your tasks which should take priority first is to index ever sing file then update  to ensure completeness also i notice another file that has the same name and  this should be only one file to ensure no confusion. assume nothing is correct and comprehensivly review each file in every subdirectory independently. skip nothing that is another unbreakable rule im giving you. i expect you to take your time and pay attention to all details in our code and cross reference WEB to see if you can improve or enhance our current build with latest code/project examples, utilize github and anyother code resourse and Code data/official documentation. also ensure no duplicates and make sure everything is tailored to our build to excced our current competitors like Collectr and Rarecandy for TCG collection and value tracking. I want you to focus on Collectr because that is the top ranked app right now in this industry, i want you to list out all features and services and function and even screenshots of the app and make it the exact same as our base and then we tailor it to the name Deck lab where we include features not only for collectors but also TCG competitive players. i want you to make an updated app description and other business level documentation to fully explain this application to its fullest and completeness to ensure clear communicative verbose on our build and why this will be the best TCG app on the market. include a suggestion file as well for improvements and enhancements you feel would even further our stance and claim on being the number one TCG app for collectors and competitive players. also create a resources file where we keep all of our resources that we use or plan to use or even reference. i will include an app description of what i had in mind at first i want you to further update that as well as now its outdated because im focusining on adding enhancemnets for Competitve TCG players as well. 
+
+## Project Name: DeckLab Bolt
+
+## Project Overview
+
+**Mission:** To create the most advanced, intuitive, and comprehensive Pokemon TCG management platform that bridges the gap between physical collecting and digital innovation, providing users with unprecedented tools for collection management, market intelligence, and community interaction.
+ A cross-platform app (iOS/Android/Web) for collectible card game enthusiasts. It focuses on Pokémon TCG but equally supports other major franchises (Magic: The Gathering, Yu-Gi-Oh!, Dragon Ball, One Piece, Disney Lorcana, etc.). The app offers a comprehensive card database with set-by-set browsing (by region/release), multi-language support (English, Japanese, Chinese, etc.), and advanced search/filter. Users can browse sets or even a Pokémon “Pokédex” view grouping cards by species and evolution chains. Detailed set pages display set logos, total card counts, progress (owned vs. total), and set value. Cards can be filtered by attributes like rarity, illustrator, color/type, price range, or card number. All card data (names, images, stats, flavor text) is pulled from authoritative sources (e.g. Pokémon TCG API, Scryfall, YGOPRODeck, etc.) for up-to-date data and high-res images.
+
+**Vision:** To be the industry standard for Pokemon TCG enthusiasts, offering a seamless, powerful, and engaging experience that elevates their collecting and playing journey.
+
+**Target Audience:** Pokemon TCG collectors, players, traders, and enthusiasts seeking advanced tools for managing their collections, tracking market values, and connecting with the community.
+
+**Core Values:** Innovation, User-Centric Design, Accuracy, Community, Performance, Scalability, Security.
+
+
+The primary goal is to rebuild DeckLab Bolt from scratch with clean code, modern architecture, and enhanced features, addressing previous shortcomings and incorporating best practices. The new application should be:
+*   **High-Performance:** Optimized for speed and responsiveness across all features.
+*   **Scalable:** Designed to handle a growing user base and increasing data volume.
+*   **Robust and Secure:** Implementing strong security measures and error handling.
+*   **Maintainable:** Built with well-documented and modular components.
+*   **User-Friendly:** Featuring an intuitive and engaging user interface adhering to modern user experience principles.
+*   **Feature-Rich:** Implementing all existing and planned features with improvements, and ensuring a solid foundation for future enhancements.
+
+## Application Features and Services (Exhaustive Detail)
+
+Based on the extensive documentation and detailed analysis, the following features and services are critical for the rebuild, with every identified functional area and conceptual aspect described:
+
+### 1. Onboarding Experience
+
+*   **Core Functionality:**
+    *   **Welcome Screen:** The initial screen users encounter upon opening the application, providing a brief introduction to DeckLab Bolt and its core value proposition. This screen serves as an entry point before the main application features or authentication.
+    *   **Walk-through Screens (Onboarding Tutorial):** A series of instructional screens designed to guide new users through the application's key functionalities, features, and user interface. These screens should be engaging and help users understand how to get started, highlighting essential aspects like collection management, market tracking, or search.
+*   **Purpose of Associated Application Parts:**
+    *   A dedicated initial landing page (`welcome.tsx`) that can lead to either the walk-through or authentication.
+    *   A mechanism to manage the sequence and presentation of the walk-through screens.
+
+### 2. User Authentication & Profile Management
+
+*   **Core Functionality:**
+    *   **User Registration:** A secure process for new users to create an account.
+    *   **User Login:** A secure method for existing users to access their accounts, including managing ongoing user sessions.
+    *   **Password Reset/Recovery:** A system for users to securely regain access to their accounts if they forget their password.
+    *   **Profile Editing:** Users can view and modify their personal account information, visual representation, and other associated details.
+    *   **Settings Management:** Comprehensive options for users to customize their application experience, including preferences for alerts, privacy controls, and the application's visual appearance.
+    *   **Premium Feature Management:** Handling the functionality related to premium access, including how it is acquired, managed, and how it enables specific enhanced features.
+*   **Purpose of Associated Application Parts:**
+    *   Dedicated sections within the application for authentication entry, login, and registration.
+    *   A central area for users to view and manage their profile and settings.
+    *   An underlying mechanism for managing the user's logged-in status and account information globally throughout the application.
+    *   Defined structures for user data, including their identifier, display name, contact information, visual representation, and premium status.
+
+### 3. Card & Collection Management
+
+*   **Core Functionality:**
+    *   **Card Identification (Future/Integration Point):** A facility for recognizing cards, initially through manual data entry, with potential for future integration with automated image recognition capabilities.
+    *   **Collection Creation:** Users can establish and name multiple personal collections to organize their cards.
+    *   **Card Addition (Manual & Assisted):** The ability to add individual cards to a collection, capturing various details:
+        *   The card's common identifying name.
+        *   The name of the set it belongs to.
+        *   Its rarity level.
+        *   The number of copies owned.
+        *   The physical condition of the card (e.g., perfect, slightly used, damaged).
+        *   The amount paid for the card.
+        *   When the card was acquired.
+        *   Any personal notes about the card.
+        *   The option to associate images for reference.
+    *   **Card Editing:** The ability to modify any captured details of cards already within a collection.
+    *   **Card Deletion:** The ability to remove cards from a collection.
+    *   **Collection Viewing:** Various ways to display cards within a chosen collection, with thumbnail and detailed presentations.
+    *   **Collection Filtering & Sorting:** Comprehensive options to categorize and arrange cards based on their attributes, acquisition details, or other criteria.
+    *   **Collection Statistics:** Presentation of summarized data for entire collections, such as overall estimated monetary value, total count of cards, and count of unique cards.
+    *   **Set Completion Tracking:** The capability to monitor progress towards acquiring all cards from specific Pokemon TCG sets.
+*   **Purpose of Associated Application Parts:**
+    *   A primary screen dedicated to viewing and managing user collections.
+    *   An interface designed for card identification.
+    *   Detailed display for individual cards.
+    *   Detailed display for specific card sets.
+    *   Reusable visual elements for presenting card information.
+    *   An underlying mechanism for managing the user's collection data globally.
+    *   A service responsible for handling interactions with the underlying system for collection data.
+    *   A central storage mechanism for managing user collections and related data.
+    *   Defined structures for card data and how cards are represented within a collection, including all their properties.
+
+### 4. Market Data & Pricing
+
+*   **Core Functionality:**
+    *   **Real-time Market Data Integration:** A system that connects with external sources to obtain up-to-date card prices and market trends.
+    *   **Card Value Tracking:** Automated updating of the estimated financial worth of individual cards and entire collections based on current market information.
+    *   **Price History Graphs:** Visual representation of how a card's price has changed over time.
+    *   **Marketplace Browsing:** The ability for users to explore and compare card prices from various integrated marketplaces within the application.
+    *   **Alerts & Notifications:** A future capability to inform users about significant price changes for cards they are interested in.
+*   **Purpose of Associated Application Parts:**
+    *   A main screen for market overview and exploration.
+    *   Display of current and historical market information on individual card details.
+    *   An underlying mechanism for managing market data globally.
+    *   A service responsible for retrieving market information.
+    *   A central storage mechanism for market data.
+
+### 5. Search Functionality
+
+*   **Core Functionality:**
+    *   **Comprehensive Card Search:** The ability to find cards across the entire Pokemon TCG database using criteria such as:
+        *   Card's descriptive name.
+        *   The set it belongs to.
+        *   Its rarity level.
+        *   Its category (e.g., Pokemon, Trainer).
+        *   More specific types (e.g., Basic, Stage 1).
+        *   Identifying symbols.
+        *   The artist who created the artwork.
+        *   Its energy affiliation.
+    *   **Advanced Filtering:** Detailed options to narrow down search results.
+    *   **Set Browsing:** The ability to view all available Pokemon TCG sets with their specific details.
+    *   **Search History:** A future capability to remember and easily revisit previous searches.
+*   **Purpose of Associated Application Parts:**
+    *   A dedicated screen for conducting searches and displaying results.
+    *   Underlying components for presenting search results (e.g., lists of cards, lists of sets).
+    *   A service responsible for handling complex card database queries.
+
+### 6. Social & Community Features (Conceptual/Future Expansion)
+
+*   **Core Functionality:**
+    *   **Social Feed:** (Conceptual) A platform where users can share updates about their collections, recent acquisitions, or trading interests, and interact with content from others.
+    *   **Friend System:** (Conceptual) The ability to connect with other users and view their publicly shared collections.
+    *   **Direct Messaging:** (Conceptual) A private communication channel between users within the application.
+    *   **Trade Platform:** (Conceptual) A mechanism to facilitate secure card exchanges between users.
+*   **Purpose of Associated Application Parts:**
+    *   A dedicated screen or section for social and community interactions.
+
+
+
+
+
+## Competitor Analysis Takeaways for Improvement
+
+The following competitors were identified and analyzed. The rebuild should carefully consider their strengths and explicitly address their weaknesses to establish a distinct and superior offering.
+
+### 1. TCGPlayer App
+*   **Strengths:** A well-established and widely recognized platform within the community, offering an extensive and accurate card database with integrated buying and selling capabilities and reliable pricing information.
+*   **Weaknesses:** The user interface is often described as difficult to use, outdated, and lacking a modern feel. It focuses less on personalized collection management beyond basic financial value and lacks strong social or community interaction features. Its search and filtering capabilities can be challenging to navigate.
+*   **DeckLab Bolt Differentiator:** The rebuild must excel in offering a **superior, modern, and highly intuitive user experience**. It needs to provide **advanced tools for organizing collections**, deliver **more personalized insights** into collection performance, and build **robust community features** to foster deep user engagement beyond transactional activities. Significantly improved and streamlined **search and filtering** will be a key advantage.
+
+### 2. Poke TCG Dex
+*   **Strengths:** Offers a comprehensive and detailed card database, akin to a Pokedex for Pokemon TCG, rich with informational content for individual cards and sets, often including elaborate artwork and background lore.
+*   **Weaknesses:** Primarily serves as an informational database with **very limited or no collection management capabilities**. It **does not integrate market data or provide pricing information** and completely lacks any social or interactive features. It is not designed to support trading or direct buying/selling.
+*   **DeckLab Bolt Differentiator:** The new DeckLab Bolt will uniquely **combine the comprehensive data depth of Poke TCG Dex with powerful, integrated collection management and real-time market intelligence**. It will function as a holistic platform, moving beyond a purely informational role to provide a complete user experience.
+
+### 3. Collectr App
+*   **Strengths:** Features a visually appealing interface designed for straightforward collection tracking, often presenting collections with a clean and modern aesthetic, and offering a relatively easy process for adding cards for basic tracking.
+*   **Weaknesses:** **Lacks in-depth market data integration**, often providing only basic price points without historical data or detailed market trends. It offers **limited advanced analytics** for collection performance or growth and **lacks robust community features** for interaction and trading. Furthermore, it can be **restricted in providing detailed card information and customization** (e.g., precise condition tracking beyond general categories).
+*   **DeckLab Bolt Differentiator:** The rebuild must deliver **deeper and more granular market integration**, including historical data and trend analysis. It will provide **advanced analytics for collections** (e.g., growth over time, profitability tracking). Crucially, DeckLab Bolt will enable **more granular control over card details and conditions** and will integrate **robust community features** to create a more interactive and engaged user experience.
+
+### 4. Rare Candy
+*   **Strengths:** Often targets specific, niche functionalities such as tracking graded cards or offering simplified collection management, typically providing a clean and focused user experience for its specialized purpose.
+*   **Weaknesses:** Its **niche focus means it does not present a comprehensive solution** for the full spectrum of collector needs. Its **scope is limited** when compared to a comprehensive management platform. It generally **lacks extensive market data, social features, or advanced organizational tools**.
+*   **DeckLab Bolt Differentiator:** DeckLab Bolt will position itself as a **full-suite, all-encompassing solution** that addresses *every* aspect of TCG management. It will deliver a **highly integrated experience**, spanning from meticulous collection tracking and sophisticated market analysis to vibrant community engagement, thereby providing a more complete and superior offering than specialized applications.
+
+
+ 
+
+continue to index entire codebase and all files to insure a 100% complete and production ready application. review the prompt and make sure everything is up to spec with these features and suggest improvements as well 
+
+NO "Coming Soon" messages
+- NO "Placeholder" text
+- NO mock data objects
+- NO TODO comments
+- NO incomplete function stubs
+- NO Alert.alert() with placeholder messages
+- NO hardcoded sample data
+- NO "Feature not implemented" messages
+- NO generic error messages without specific context
+
+The app is ONLY complete when:
+- Every screen functions perfectly with real data
+- All data is live and updates in real-time
+- UI matches competitor quality and exceeds it
+- Zero placeholder content exists anywhere
+- All features work completely without errors
+- Performance is production-ready and smooth
+- App feels native and polished on iOS
+
+continue to fix build with more verbose and type script error checker and or check for lint errors and build errors, automatically fix and cycle until no build errors are created.
+
+⸻
+
+🔍 Search & Filtering
+	•	Advanced Lucene-style query support.
+	•	Filters by franchise, set, language, rarity tier, color/type, illustrator, price, card number, etc.
+	•	Compound searches (e.g. Charizard OR Mewtwo, ranges, exclusions).
+
+⸻
+
+📚 Set Summaries
+	•	Set logo, release date, total cards, owned vs. missing, total set market value.
+	•	Live API pricing (TCGPlayer, CardMarket, eBay).
+	•	Progress tracking and value history.
+
+⸻
+
+🌐 Language Support
+	•	Multi-language database coverage (English, Japanese, Italian, Chinese, etc.).
+	•	UI translations, currency localization, RTL support where needed.
+
+⸻
+
+🃏 Card Detail Pages
+	•	High-resolution images (front/back).
+	•	Edition info, rarity, illustrator, flavor text, rulings.
+	•	Market data: current value + price history graphs.
+	•	Alternate prints, language variants, foil vs. non-foil.
+	•	Collection controls: toggle owned, set quantity, condition (Mint/NM/etc.), tag duplicates, mark for trade/sale.
+	•	Pokémon-specific Pokédex family + evolution chain view.
+
+⸻
+
+📂 Collection Management
+	•	Manual add, barcode/QR scan, or image recognition.
+	•	Track quantity, condition, promos, and variations.
+	•	Organize into custom lots/folders (color-coded, nested).
+	•	Bulk editing (add booster box contents in one go).
+	•	Duplicates management.
+	•	Summaries: by condition, by lot, total value breakdown (raw vs graded).
+
+⸻
+
+📖 Binder View
+	•	Virtual 9-card and 18-card page layouts.
+	•	Drag-and-drop organization.
+	•	Smooth animations + 3D page turns.
+	•	Shareable binders.
+	•	Greyed-out silhouettes for missing cards.
+	•	Quick popup stats on hover/tap.
+
+⸻
+
+🤖 Grading Pre-Assessment
+	•	AI-powered camera grading tool.
+	•	Analyzes centering, edges, corners, surface defects.
+	•	Outputs estimated PSA/BGS/CGC score.
+	•	Visual overlays highlighting flaws.
+	•	“Ready for grading” tag with estimated graded value.
+
+⸻
+
+👤 User Accounts & Social Profile
+	•	Sync collections across devices.
+	•	Public profile with highlights (pinned cards, favorite binders).
+	•	Follow, comment, trade requests, wishlist sharing.
+	•	Collection stats (value, completion, badges).
+	•	Privacy settings for public/private visibility.
+
+⸻
+
+💹 Marketplace & Portfolio
+	•	Tag cards for sale/trade.
+	•	Set custom prices with market comparison.
+	•	Real-time API-driven value ranges + recent sales.
+	•	Portfolio breakdown: total collection vs. original cost, gains/losses.
+	•	Sealed product support (booster boxes, decks, etc.).
+
+⸻
+
+🎨 Design & UI
+	•	Dark mode-first design with bright, colorful card art.
+	•	Brand-accurate accents (Pokémon yellow, Lorcana gold, etc.).
+	•	Smooth animations + WCAG accessibility compliance.
+	•	Responsive on mobile/tablet/web.
+	•	Clean “digital Pokédex” aesthetic.
+
+⸻
+
+🔗 Data Integration
+	•	Pokémon TCG API (TCGPlayer prices), YGOPRODeck, Scryfall, CardMarket APIs.
+	•	Price scrapers for eBay sold listings.
+	•	Unified filter system adapting to each franchise.
+
+⸻
+
+⚡ New Advanced Features
+
+🎴 Live Card Engine
+	•	3D holographic card rendering using Skia.
+	•	Gyroscope-controlled card tilt/rotation (hold and move phone to view).
+	•	Haptic feedback for flips, zooms, and binder interactions.
+	•	Immersive animations (foil shimmer, holo effects, light reflections).
+	•	Optimized for 60fps performance across mobile + web.
+	•	Cards displayed with the visual fidelity of Pokémon TCG Pocket.
+
+🏦 Virtual Vault
+	•	Booster Pack Simulation: Open packs/boxes virtually with authentic animations.
+	•	Realistic Odds/Hit Rates: Simulates true pull rates from historical pack data.
+	•	Track “virtual pulls” vs. actual collection.
+	•	Unlockable “vault effects” (sparkles, foil crackle, sound FX).
+	•	Share booster openings socially (stream or post animations).
+
+⸻
+
+
+
+(From your notes)
+	•	Multi-TCG support implemented.
+	•	Advanced search + Lucene queries.
+	•	Collection management system with folders and stats.
+	•	Digital binder system (grid + share).
+	•	Auth + profile system.
+	•	Card detail pages with live pricing + AI grading UI.
+	•	Dark UI with animations + accessibility.
+	•	Redux Toolkit + TypeScript + RTK Query + React Router architecture.
+	•	Pages built: Home, Search, Collection, Binder, Profile, Card Detail, Auth.
+	•	Demo account functional.
+
+⸻
+
+🚀 Next Steps
+	•	Integrate AI-powered grading camera backend.
+	•	Wire up live pricing APIs (TCGPlayer, CardMarket).
+	•	Build social/trading layer.
+	•	Expand marketplace functionality.
+	•	Implement Live Card Engine + Virtual Vault for premium user experiences.
+
+⸻
+
+✨ With Live Card Engine + Virtual Vault, this app becomes not just a tracker but an immersive digital Pokémon/TCG playground — mixing hardcore collection management with fun, social, and interactive features.News & Information
+	•     https://www.pokebeach.com 
+	•	https://www.pokeguardian.com 
+	•	https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Trading_Card_Game 
+	•	https://www.serebii.net
+ 
+Competitive Info
+	•	https://limitlesstcg.com 
+	•	https://www.trainerhill.com 
+	•	https://www.ptcgstats.com 
+	•	[PokéGym] (no direct link listed – likely a forum)
+
+Deck Builders
+	•	https://pokemoncard.io 
+	•	https://pokegear.app 
+
+Japanese Decklists
+	•	https://pokecabook.jp 
+	•	https://pokekameshi.com 
+	•	https://pokecardlab.net 
+
+Card Databases
+	•	https://limitlesstcg.com 
+	•	https://pkmncards.com
+ 		Pokemontcg.io
+Ebay api for market data and PSA pop reportsPlease ensure the search is the main feature and Home Screen of the app. I want it to display all the sets with the set logos from the pokemontcg.io and then when you click on the set is displays the card list of pokemon default organized by the typing of the pokemon and just like https://www.justinbasil.com/visual/ss11 and then there is a sort and filter button at the top left in modern swift ui design using WWDC design tips. Also when you click on a card it displays all the data on the card like raw and graded prices, population reports for each grading company as well. And then fair good and best prices for cards. Also listings for the card on eBay as well both raw and graded versions when you click on the option it pulls form the bay api, also the charts, portfolio data, and any pre grading results if you have that card. It should show the card art at the top at all times and when you click on it is how you access the live card model view with our holographic shaders that utilize the gyroscope with pinch to zoom and other features make it perfect like your holding the card  and the live model view like collectr examples in the screenshots . Also add these sources to our data base and try to make tabs for news and information etc. https://www.justinbasil.com/external
+For the card scanning feature I want it to scan cards when they get into focus after 2 seconds automatically or if the user has it in manual mode when they tap anywhere on the screen. the Overlay blurs out everything except a window the size of a card so our system only captures and processes  the information on the card. Users can see the estimated value of each card and the grand total of the current scan session. From there users can select to add it to main collection and or one of the custom lots they make like sell, trade, and or even add to binder service as well. Or if users batch scan they can make a running list that they can utilize for price checking current cards infront of them so they can understand how to organize them. The AI personal assistant should be able to utilize the information of the cards being scanned in to help you with any tasks or questions that are within its capabilities of handling for things like organization, price data, population reports, full data charts on the specific card for value tracking and price history and even projection based on user popularity. the users can sort filter and organize cards by rarity, price, card number, date added, English, Japanese, Chinese, holo, non holo, full art, etc. this gives the user powerful tools and abilities to do anything quickly to  ensure they are efficient.when users toggle to pre grading in the camera scanner the overlay is the same and the photos that are required to generate a report will be empty and as you scan each requested one in it will put the photo below until all photo requirements are met with proper lighting and quality to ensure best results and then users can press Submit for pregrading as it will turn into an actionable button when all photos are input.  The pre grading is a multi capture system to ensure accuracy and proper pre grading reports that are exactly the same as TAG grading.  Utilize the website and copy it exactly as it is even with the slider for the surface details to show imperfections and all report information. you will also include reports not only by TAG standards but for PSA, Beckett,  and CGC, and even AGS. ill include two reports of a Gyarados Gold star in different grades for you to understand more specific how they handle grading and how they grade. please include information like this in another file with these references to make sure future AI assistants understand what i want and need just in case  
+https://my.taggrading.com/card/W7283117 
+https://my.taggrading.com/card/L4746302
+ for the live card model make sure its a fully physics-based, holographic foil shader that utilizes gyroscope to provide an AR type of feel to the cards when the card art is pressed. 
+Each pixel simulates a ray of light diffracting into a rainbow of waves, which add and subtract to create these incredible patterns.
+Not a single gradient should be used.
+ensure you handle this update systematically so you dont miss anything or any detail. review this prompt as much as needed to ensure you understand and finish all task given to completeness
+
+Please use any and all opensource resources, libraries and databases for our build. 
+
+also take this into account as well for our UI 
+React Native UI Frameworks & Design Inspiration
+
+To achieve a modern, award-winning UI for DeckLab Bolt on Expo (iOS, Android, Web), we should build on proven open-source React Native libraries and best practices. Leading UI kits like Gluestack UI (formerly NativeBase), Tamagui, React Native Paper, UI Kitten, React Native Elements, and Shoutem UI offer polished, customizable components that work cross-platform. For example, Gluestack/UI provides 30+ prebuilt components with Tailwind-like styling, and Tamagui is a high-performance system optimized for complex designs ￼ ￼. React Native Paper (Material Design) supports light/dark theming, and UI Kitten (Eva Design) supports RTL languages – both are Expo-compatible and production-ready ￼ ￼. These libraries reduce boilerplate and ensure platform-consistent widgets (buttons, cards, forms) out of the box.
+
+For animations and interactive effects, Expo bundles Reanimated (version 3/4) which enables smooth, native-driven animations ￼. We should also use Lottie (react-native-lottie) for high-quality vector animations and micro-interactions (confetti, sparkles, pack-opening effects) ￼. Core UI/UX libraries (React Navigation for screen routing, Expo Router or React Router for web) should be used for consistent navigation. Iconography can come from open sets like react-native-vector-icons or the built-in Ionicons/Material icons. Expo also supports shopify/react-native-skia for custom GPU-accelerated graphics (ideal for the holographic “Live Card” shaders and 3D effects) ￼. Altogether, using these open-source tools ensures DeckLab Bolt’s UI can be highly polished, themeable (e.g. a dark-mode design with bright “PokéYellow” accents), and maintainable by a React Native dev team.
+
+Importantly, we follow platform guidelines: apply Material Design heuristics for Android and Apple’s Human Interface Guidelines (HIG) for iOS. As one guide notes, “it’s essential to follow the design guidelines for each platform” to achieve a native look and feel ￼. For example, use ample touch targets, responsive flex layouts, clear visual hierarchy, and subtle transitions ￼ ￼. Apple Design Award winners emphasize fluid animations, depth effects, and haptics. The ADA-winning “Denim” app, for instance, uses “smooth scroll transitions and elegant text and mesh gradients” plus custom haptic feedback and depth animations to create an engaging experience ￼. We should similarly integrate dynamic gestures, transitions, and feedback. (In short: treat DeckLab Bolt like a polished Apple Prize contender – smooth, lively, and intuitive.)
+
+Finally, modern UX encourages gamification and personalization. DeckLab Bolt can learn from apps like Duolingo (an ADA winner) which reward users, adapt difficulty, and sprinkle playful animations. While Duolingo isn’t a TCG app, it shows how “punctuated” progress markers and fun UI can boost engagement. We will incorporate achievement badges, progress bars, and interactive tutorials (“sparkle” when a set is completed, congratulatory animations, etc.) to make collecting addictive.
+
+Key UI Libraries (Open Source)
+	•	Component Libraries: Gluestack (NativeBase) ￼, Tamagui ￼, React Native Paper ￼, UI Kitten ￼, React Native Elements ￼, Shoutem UI ￼. Each offers theming, cross-platform support, and a rich set of components (buttons, lists, cards, modals). For example, Gluestack and Tamagui are highly customizable and maintain performance even with complex UIs.
+	•	Animation Libraries: React Native Reanimated (Expo’s default) for physics-based animations and transitions ￼. Lottie for lightweight vector animations (e.g. pack-opening or swipe animations) ￼. Moti or React Native Animatable could also be used for simpler declarative animations.
+	•	Graphics & Effects: React Native Skia (Shopify) for custom shaders and the “holographic” live card effect ￼. Expo supports sensors like expo-gyroscope and expo-haptics to enable gyroscope-driven tilt and vibration feedback when viewing cards. react-native-gesture-handler and react-native-redash for smooth pan/zoom interactions (especially on the “Live Card” zoomable image).
+	•	Charts: Use Victory Native or react-native-chart-kit for price/portfolio charts. Victory supports animated, themeable charts and works with Skia (it now depends on Reanimated, Gesture Handler, and Skia for high-performance updates) ￼ ￼. It easily renders line, bar, and pie charts with animations. Alternatively, react-native-svg-charts or react-native-gifted-charts could be used for simpler needs.
+	•	Other Tools: expo-camera for scanning and photo capture. react-native-permissions if needed for camera access. React Native Gifted Chat for any in-app messaging or chat features ￼. expo-clipboard, expo-file-system, expo-web-browser for sharing and external links. Redux Toolkit or Zustand for state management (especially to sync user data across screens) and TypeScript typesafety across the codebase.
+
+By combining these libraries, we can rapidly build a visually impressive app while maintaining full control over style and performance.
+
+Feature-by-Feature UI & Screen Layout
+
+Below is a proposed breakdown of every major feature and its UI/UX flow. Each screen uses live data (no placeholders) and maximizes platform guidelines for a polished, intuitive experience.
+
+1. Onboarding (Welcome + Tutorial)
+	•	Welcome Screen: A fullscreen welcome view (e.g. DeckLab logo, tagline) with an elegant animated background or card motif. A prominent “Get Started” or “Log In / Sign Up” button leads onward. Possibly a quick animated transition or parallax effect.
+	•	Walk-through Tutorial: Carousel or paged tutorial screens highlighting key features (e.g. “Scan your cards”, “Manage collections”, “Track market prices”). Use large, colorful illustrations (e.g. blurred card art) and minimal text. Include skip and back/next navigation, with progressive page indicators. Use smooth fade/slide animations between pages. Ensure typography and images meet dynamic type (large fonts, high contrast).
+
+Implementation: Use a modal or initial navigation stack (WelcomeScreen followed by OnboardingScreen1,2,...). Each slide uses library components (cards, text). Persist a flag in local storage so walkthrough only shows on first launch.
+
+2. Authentication & Profile
+	•	Login / Sign-Up: Clean, simple form screens. Use secure text inputs for email/password (filled icons like user, lock). Offer social logins (e.g. Google) if desired (using Expo AuthSession). Show error messages inline (e.g. “Invalid email”). Use the app’s accent colors for buttons.
+	•	Password Recovery: Separate screen/modal to input email for reset. Confirm success or errors.
+	•	Profile Screen: Accessible after login (in a “Profile” tab). Displays user avatar, name, and stats (e.g. total cards, collection value, badges). Options include editing profile picture/name, toggling privacy, and managing premium subscription. Provide a “Settings” section: notification preferences, app theme (light/dark), language, etc.
+
+Implementation: Use form libraries (e.g. Formik) for validation. Securely manage auth state globally (React Context/Redux). Profile picture selection via expo-image-picker.
+
+3. Home / Search Screen (Main Feature)
+	•	Search Bar / Quick Filters: At top, a search input with placeholder like “Find cards or sets…”. Include a filter button (top-left) that opens an advanced filter modal. Use icons (search, filter) from vector-icons.
+	•	Sets Grid/List: Display all Pokémon TCG sets (via pokemontcg.io API) with set logos and names in a grid or list. For cross-platform, a 2- or 3-column FlatList grid with large set icons and set title underneath. Show release date or region subtitled. Provide an “All Sets” section followed by separate sections for Magic, Yu-Gi-Oh!, etc. (multi-TCG support). Each set card uses a clean Material-style card or outline.
+	•	Filter/Sort Button: At top-left, a “Sort & Filter” button (e.g. funnel icon). On tap, slide in a modal panel with filtering options (franchise, region, languages, card type, rarity, price range, etc.). Each filter uses checkboxes or sliders. Ensure the panel looks modern (semi-transparent blur behind, card edges). Use toggles for common filters.
+	•	Popular/Recent Sets: Optionally above the grid, a horizontal scroll of “Popular” or “Recently Released” sets with badges. Animations when swiping.
+
+Citing Inspiration: The JustinBasil “Visual Set List” uses a clean grid of set logos and cards ￼. We emulate that polished style (grid with high-quality images, responsive layout).
+
+Implementation: Use FlatList with numColumns={2} for grid. Navigate to SetDetailScreen on tap.
+
+4. Set Detail (Card List)
+	•	Header: Show the set’s large logo or graphic at top, plus title, release date. Background could be a blurred version of the logo (dark overlay).
+	•	Set Stats: Below header, display total cards in set, owned vs missing count, and total set market value. Use horizontally arranged badges or info cards. Include a progress bar or donut chart for “Set Completion”. A small spark animation when first completed.
+	•	Card List by Type: Show cards grouped by type/category. For Pokémon sets, default to “Pokémon” section first, then “Trainers”, “Energy” etc. Within each section, list cards in order (or allow sorting by number, rarity, or price). Use a subheading (type icon + name). Each card entry is a horizontally laid-out row with thumbnail (card art), name, rarity, and small indicator if owned. Or a grid of thumbnails (like the JustinBasil visual list) with the card image and card number overlay.
+	•	Sorting/Filtering Controls: At the top (below header), provide a segmented control or dropdown to quickly filter card type (similar to iOS segment). Already have “Sort & Filter” button from home. Also allow pull-to-refresh to update live data.
+
+Citing Design: The JustInBasil grid illustrates grouping by type ￼. The UX should mimic a modern “Pokédex” or “album” – clean rows or grids with crisp thumbnails, ample white (or dark) space, and consistent margins.
+
+Implementation: Likely a SectionList grouping by card type. Thumbnails use high-res card art (lazy-loaded). Tapping a card goes to CardDetailScreen.
+
+5. Card Detail Page
+	•	Hero Image: Show the card’s front image fullscreen (or within a top half container). Support pinch-to-zoom. Below or overlay a translucent toolbar with “back” and “flip” buttons (for back image). Clicking the card image enters the “Live 3D Model” mode (see below).
+	•	Info Section: Under the image, list card details: set name/number, category (Pokémon/Trainer/Energy), rarity icon, HP/Stats, evolution family (for Pokémon) or card text/flavor. Each attribute can be a row with icon (e.g. energy symbol, illustrator icon). Use collapsible panels or tabs if too much info.
+	•	Market Data: Prominently display current price range: raw vs graded. Show three values: “Fair”, “Good”, “Best” (market quotes) for raw and separately for PSA/BGS cards. Underneath, an interactive price history graph (via Victory or chart-kit) for the selected card. Also display PSA/Beckett population reports (e.g. “PSA Population: 20/ 100, etc.”). Possibly use small tiles or list items.
+	•	External Links: Buttons or list items linking to eBay searches (raw/graded), CardMarket, TCGPlayer for purchases. Tap opens WebBrowser or integrated list.
+	•	Ownership Controls: If user toggles “Owned”, show controls for quantity, condition (dropdown: Mint/NM/Lightly Played/etc.), whether foil, personal cost. Buttons: “Add to Collection”, “Mark for Trade/Sale”, “Add to Wishlist”. Use color-coded tags (green for owned, orange for wishlist). These controls use the same style as common forms (pickers, steppers).
+	•	Alternate Variants: If card has alternate print/art or other language editions, present a horizontal scroller showing those card images as tiles; tapping one switches the main info to that variant.
+
+Citing Details: We incorporate all specified elements (edition info, illustrator, rulings, etc.) in a clean vertical list. The market graph and data align with “Market Data & Pricing” requirements. We keep the card art visible at all times, as requested, with a persistent image header.
+
+Implementation: Use a scroll view. Chart from Victory Native (animated). Buttons trigger API calls for eBay data. The “flip” animation can be a Reanimated 3D flip effect.
+
+6. Collection Management
+	•	Collections List: A main “Collections” tab shows all user collections (e.g. “My Pokémon Set”, “Legacy Cards”, “For Sale”, etc.). Each is a card showing collection name, count, total value, maybe a progress bar. Include a “+ Create Collection” button (with a modal form for name and icon color).
+	•	Collection View: Selecting a collection shows its card contents, similar to Set Detail layout. Provide sort/filter (by date added, price, rarity, language, holo status, etc.). Thumbnails of cards can be grouped or listed. Show summary stats: total unique cards, total count, total current market value vs total purchase cost. Possibly a mini-chart of value over time (if tracking purchase history).
+	•	Add/Edit Card: Within a collection, an “Add Card” button opens a form to manually add a card (search/select card by name/ID, input quantity, condition, price paid, notes, photo). Existing cards list each entry with quantity and condition tags. Swiping a card entry reveals “Edit” and “Delete” actions (or use an Edit screen).
+	•	Bulk Actions: Allow bulk import (e.g. enter a number of cards or scan multiple codes) and bulk edit (multi-select to change location/trade tags).
+	•	Set Completion Tracking: When viewing a set within a collection context, visually mark owned cards versus missing ones (e.g. grayed silhouettes for missing).
+
+Citing Need: This covers all “Card & Collection Management” features. The UI must be rich and flexible (far beyond Collectr’s basic flows). For example, instead of simple lists, use cards with colored badges and interactive charts. Always allow real data editing (no placeholders or TODO prompts).
+
+Implementation: Use Redux or Context for collection state. Persist to local storage or synced backend. Use expo-sqlite or AsyncStorage for offline data.
+
+7. Binder (Virtual Album)
+	•	Binder View: Emulate a real binder page: show an empty 3×3 or 6×3 grid (“9-card” or “18-card” page). Each slot can hold a card image. Missing slots show a gray silhouette. Users can flip through pages with swipe gestures. A page-turn animation (using Skia or Reanimated) adds realism.
+	•	Drag-and-Drop: Enable dragging a card (from collection or search results) onto a binder slot. Use React Native Draggable FlatList or PanResponder to implement drag. Provide smooth physics and snap-to-slot.
+	•	Animations: Use 3D perspective effects for page turns (slight rotation) and a subtle shadow between pages. Tapping a card on the binder opens its detail popup (show card info on overlay). Hover (on web) or long-press (on mobile) could show quick stats tooltip.
+	•	Sharing: Allow exporting a binder page as an image or sharing via link. “Share Binder” button triggers a snapshot (via react-native-view-shot) or shares a pre-generated image (expo-sharing).
+	•	Gallery Navigation: If many pages, a thumbnail drawer at bottom or a page number input could quickly jump to pages.
+
+Implementation: This is advanced but doable with React Native animations (e.g. using Reanimated 3D transforms). Placeholder content must be avoided: each slot is tied to actual card data or shows a dynamic placeholder silhouette via code.
+
+8. Scanner & Pre-Grader
+	•	Card Scanning Camera: A dedicated screen using expo-camera. Show live camera feed with a semi-transparent overlay: everything blurred/darkened except a centered rectangular frame matching standard card aspect ratio. The frame guides alignment. If in auto-scan mode, once a card is stable in frame (~2 seconds), automatically capture. If in manual mode, tapping anywhere takes a picture.
+	•	On-the-fly Value Display: As cards are scanned (one by one), overlay a small panel showing each detected card’s name and estimated value. Maintain a running total of scanned cards’ value at bottom. Use non-intrusive slide-in animations for each detected card result.
+	•	Session Actions: After scanning, show a summary list of cards found with checkboxes or options “Add to main collection” / “Add to [Custom Lot]”. Allow quick toggling of add (for sell/trade lots). Then “Done” or “Save to Collection” button finalizes.
+	•	Pre-Grading Mode: Toggle to Grading mode. The overlay frame stays, but UI instructions appear: “Take photo of front”, “Take photo of back”, “Take photo of top edge”, etc., with outlines for each position. A vertical list of empty thumbnail slots indicates required photos (Front, Back, Corners). As user captures each (auto or tap), fill that slot with a thumbnail. When all required views are captured in acceptable quality, enable a “Submit for Pre-Grading” button.
+	•	Grading Report UI: After submission, display a detailed report (like TAG Grading website): for each criterion (centering, corners, edges, surface), a slider/score and textual analysis. Show final estimated grade for PSA, BGS, etc. Include pop-out images with highlights of flaws (per TAG’s sample reports).
+
+Citing Method: While implementing card recognition is complex, note that open-source examples use ML models (e.g. YOLO with perceptual hashing ￼ ￼). Expo can use TensorFlow.js or offline ML for this. The UI must guide the user through scanning in real time – lean on visual and haptic feedback (vibrate on successful capture).
+
+9. Market & Portfolio
+	•	Market Overview: A tab or screen summarizing trending cards and market news. Show a carousel or grid of “Hot Movers” (cards with big price changes). Tapping one opens its detail. Include overall market index: e.g. total Pokemon TCG market cap chart.
+	•	Card Market Search: Within Card Detail (as above), and also allow searching any card for price. Include historical price graphs and compare multiple marketplaces (TCGPlayer, Cardmarket, eBay).
+	•	Personal Portfolio: Show the user’s entire collection value vs. cost: a pie chart (by set or by franchise), and line chart of collection growth over time. List highest-value cards. Display “Gain/Loss” in current vs purchased value.
+	•	Marketplace Listings: In Card Detail or Portfolio, allow tagging cards for sale/trade. The UI should show a price slider or input for listing price, along with market suggested price. Then optionally display aggregated listings (through APIs/eBay) so user can preview what others ask for similar cards.
+	•	Alerts: Provide toggles in settings to alert when a card’s price crosses thresholds.
+
+Implementation: Charts by Victory. Real-time pricing from APIs (pokeTCG, TCGPlayer, Cardmarket). We’ll cache values (RTK Query with polling).
+
+10. Search Functionality
+	•	Global Search: Accessible from Home; a live-search that filters all cards across sets (via multi-key queries: e.g. “Charizard OR Mewtwo”). Show autocomplete of card names.
+	•	Advanced Filtering: The “Sort & Filter” panel must support Lucene-style compound queries (e.g. name:Charizard AND rarity:Secret). The UI can allow building advanced filters step-by-step (add criteria), or even accept text queries.
+	•	Search History: Display past searches below search bar (optional future feature).
+
+Implementation: Use a debounced text input. Leverage backend (or client-side indexed data) for multi-criteria search. UI: show filter chips for active filters.
+
+11. Social/Community & News
+	•	News Feed Tab: Aggregate RSS/API feeds from PokéBeach, Serebii, Bulbapedia, etc. Present as a scrollable list of headline cards (image + title + source). Tapping opens in-app webview (or browser). Include icons for each source.
+	•	Social Feed (Future/Conceptual): A user-generated feed: each post can include images of new cards or binders, comments, likes. UI similar to Instagram feed: card posts with like/comment icons. Users can follow others, see public collections. (This requires backend; can stub with dummy posts for design.)
+	•	Profile/Community: Show friend list, trade requests (in-app chat with Gifted Chat), wishlist-sharing.
+
+Implementation: For now, news can be static JSON or scraped content. Chat via Firebase or Hasura (outside scope).
+
+12. Additional UI Considerations
+	•	Dark Mode & Theming: The default design is dark background (deep navy/black) with vibrant card images and accent colors (Pokémon yellow, Magic blue, etc.). Provide automatic Light/Dark switch or system sync. All custom components should support both themes.
+	•	Animations & Feedback: Every tap or navigation should have subtle animation: e.g. tab icon highlight, button press ripple, page fade. Use Reanimated or built-in pressable animations. Haptic feedback on actions like adding card to collection (via expo-haptics).
+	•	Accessibility: Support dynamic text sizes (scaling fonts), ensure color contrast, and labels for VoiceOver. Use accessible components from libraries (Paper, etc.) that handle screen readers.
+	•	Responsiveness: UI should adapt to different screen sizes (mobile vs tablet vs web). Use flexible grids and media queries via React Native for Web if needed. For web, a sidebar or top nav might replace mobile tabs.
+	•	No Placeholder Text: All screens should display real or dummy but realistic data. Avoid any “Coming Soon” or lorem ipsum. For design mockups, use real card names/stats fetched from APIs. Any errors or empty states should have contextual messages (e.g. “No cards found” instead of generic “Error”).
+
+Competitive Features & AI Enhancements
+
+To surpass competitors like Collectr, DeckLab Bolt must offer unique, advanced tools:
+	•	AI Deck Builder: Though not final, consider adding a deck-building module. AI can suggest deck improvements or combinations based on collection and meta. Integrate with online deck databases (e.g. LimitlessTCG) or use GPT to analyze user’s deck for suggestions.
+	•	AI Assistant (“Agentic” UX): Implement an in-app assistant (chatbot) that can answer user queries (e.g. “Find me all promo Pikachu in my collection”, “Alert me if Charizard hits $1000”). Following modern UX trends, we can allow voice/text conversational commands (see UX research ￼). This would make the app “agentic” – proactive and personalized. For example, a chat-style help screen that guides through scanning or filtering tasks.
+	•	Predictive UX: The app could learn user patterns to pre-load data. For instance, if a user often checks a specific set, preload it. Or predict price interests (like ProCreator’s “Predictive UX” tips ￼) and surface insights before user asks.
+	•	Competitive Player Tools: Provide deck performance analytics, meta-tracking (top tournament decks), and in-app tournaments scheduler. Offer “pile suggestions” (similar to TopDecked for MTG) for deck improvement. Interface could include card synergy graphs or type coverage charts.
+	•	Unified Experience: Ensure consistency across all modules (same component library, color scheme, typography). Use a design system approach (atomic components) so search results, lists, and forms look cohesive. For example, use the same Card component for news articles, sets, and search results (with props).
+
+By combining these elements—state-of-the-art libraries, Apple-inspired design flair, and intelligent features—DeckLab Bolt’s UI will not only meet but exceed the competition. Every screen will be fully functional with live data (no placeholders or stub data), smooth animations, and an addictive polish that keeps collectors engaged.
+
+Sources: Popular React Native UI frameworks and design guidelines ￼ ￼ ￼ ￼ ￼ ￼ ￼ informed these recommendations. All libraries mentioned are open-source and Expo-compatible, aligning with the latest best practices.
+
+the app will track search history data to apply it analytically to the app the search panel will have a tabbed view for the main screen which shows top cards cards searched in the app over time by most popular to least on an infinite scroll that goes through the entire database so we can track most popular card ever on the app etc to make this a more powerful application and to further improve it. The next tab will have the Sets with their images from the databases and users can click right into a set and display the entire set list quickly and filter and sort from their and use the infinite scroll until the set list is done. The first displayed will always be the most searched/most popular and  they will filter/sort from their, the last tab is the Pokédex feature that should resemble a Pokédex and you can toggle the show on and off if users need so you can either see all pokemon or make it more gamified to see what cards users add it to their collection or the app it will have the amount of cards that pokemon has and display how many you have collected to add to the achievements properly and make The app useful for search and then have that collector usefulness to track progress and to enhance the experience. The app will keep metrics on all rarities of cards like holo, full art, V, Vmax, Gold stars, etc by specific rarities and collections that users consider as fanatics! We are to make this app not only Practiacal, easy to use but also very agentic and useful to organize collections. You will add that type of sorting feature to the binder collection as well to help organize the collection in powerful ways because every fan has their own dream setup or collection and the binder feature is like a proud visual display tool that is the whole point of collecting to be in awe of the artwork and beauty in your own organized madness as to say. I want you to double check and ensure the AI personal assistant is a full full AI that is focused on the helping the users with questions on cards by price, market analysis, projection of card popularity or price on market stats and last sold  or the TCG sport as well, also it should be able to make binders based on what the user asks for and it should be as Helpful and amazing as Chat GPT where it listens to the users full request without ineruptions and then answers or resolves the users request within the app, like if I said “make me a binder of all cards (or cards in a portfolio collection/custom set that the user creates) in my collection by color”  things that buyers and sellers can do to display their cards in an organize way to be visually pleasing and easy to find by user request. It can even be complex like “Organized my binder by Highest value and by color (specific colors like red, orange, yellow, green, blue, indigo, violet or any combinations of them)”  we have all the assets and resources/databases to make this happen so that the main search should always be persistent at the top at all times will be a search that will work like a google search bar and is predictive when typing a name it will predict it from the databases by most popular or most recent at the top of that when the user builds a history and show last 7 searched but only 5 search items will show max users must scroll down to find more options if any.  Users can even use the pictures of the cards they scanned into the app to be displayed in the binder like front and back to enhance it to make it real life and more fun experience but the default will be the card image from the databases 
+ Index entire code base and then begin systematically until complete
+
+---
+
+## 🌐 **ADVANCED MARKET ANALYSIS & INTELLIGENCE SYSTEM**
+
+### **Multi-Source Market Data Integration**
+The application implements a comprehensive market data aggregation system that pulls real-time pricing from multiple TCG marketplaces:
+
+- **TCGPlayer API**: Primary market data source with historical pricing
+- **CardMarket API**: European market data and auction listings
+- **eBay API**: Live auction and "Buy It Now" pricing analysis
+- **Population Reports**: PSA, BGS, CGC grading company population data
+
+### **Intelligent Market Analysis Engine**
+```typescript
+// Core market analysis features
+- Real-time price aggregation across platforms
+- Historical price trend analysis with linear regression
+- Volatility and momentum calculations
+- Investment scoring with buy/hold/sell recommendations
+- Market position analysis and arbitrage detection
+- Population report integration for graded cards
+```
+
+### **Advanced Analytics Features**
+- **Trend Detection**: Up/down/stable trend analysis with confidence scores
+- **Volatility Assessment**: Risk measurement using statistical methods
+- **Investment Intelligence**: Multi-factor scoring (0-100 scale) with reasoning
+- **Market Alerts**: Price drop/surge notifications with custom thresholds
+- **Risk Assessment**: Low/medium/high risk categorization
+- **Population Analytics**: PSA/BGS/CGC grade distribution analysis
+
+---
+
+## 🔍 **COMPREHENSIVE SEARCH ANALYTICS SYSTEM**
+
+### **Intelligent Search Tracking**
+The search analytics service provides complete visibility into user search behavior and card popularity:
+
+- **User Search History**: Per-user search tracking with timestamps
+- **Search Popularity Analytics**: Global search count aggregation
+- **Predictive Search**: Real-time autocomplete based on card database
+- **Recent Searches**: Last 7 searches with easy access
+- **Search Suggestions**: Popularity-based and query-matched suggestions
+
+### **Card & Set Popularity Tracking**
+```typescript
+// Search analytics implementation
+- Popular cards ranking by search frequency
+- Set search analytics with view tracking
+- Collection addition tracking from search results
+- Search filter analytics and usage patterns
+- Performance optimization based on search data
+```
+
+### **Advanced Filtering & Organization**
+- **Multi-tab Search Interface**: Cards, Sets, Pokédex views
+- **Compound Search Queries**: Lucene-style advanced filtering
+- **Filter Persistence**: Save and reuse complex search configurations
+- **Search Result Analytics**: Success rates and user satisfaction metrics
+- **Performance Monitoring**: Search speed and result relevance tracking
+
+---
+
+## 📊 **ADVANCED VISUALIZATION & CHARTING SYSTEM**
+
+### **Interactive Chart Components**
+The application includes a comprehensive suite of visualization components:
+
+#### **Line Charts for Price History**
+- Interactive price evolution charts with 30-day historical data
+- Bezier curve smoothing for visual clarity
+- Touch-responsive data points with detailed information
+- Current/High/Low price indicators
+- Custom theming with dark mode support
+
+#### **Bubble Charts for Portfolio Analysis**
+- Risk vs Reward visualization for collection assets
+- Market cap sizing with color-coded risk levels
+- Interactive bubbles with detailed asset information
+- Grid lines and axis labels for precise positioning
+- Statistics panel with averages and totals
+
+#### **Additional Chart Types**
+- **Bar Charts**: Category comparisons and distributions
+- **Heatmaps**: Correlation analysis and pattern detection
+- **Scatter Plots**: Multi-variable data relationships
+- **Candlestick Charts**: Financial market-style price visualization
+- **Export Functionality**: PNG/SVG export capabilities
+
+### **Chart Integration Features**
+```typescript
+// Visualization system capabilities
+- Responsive design for all screen sizes
+- Custom color schemes and theming
+- Interactive legends and data filtering
+- Real-time data updates and animations
+- Accessibility compliance with screen readers
+- Performance optimization for large datasets
+```
+
+---
+
+## 🔮 **PREDICTIVE ANALYTICS & FORECASTING ENGINE**
+
+### **Advanced Forecasting Models**
+The predictive analytics service implements multiple sophisticated forecasting methods:
+
+#### **ARIMA Time Series Forecasting**
+- AutoRegressive Integrated Moving Average model implementation
+- Configurable parameters (p=2, d=1, q=2) for optimal forecasting
+- 7-day ahead price predictions with confidence intervals
+- Statistical significance testing and model validation
+
+#### **LSTM-Style Neural Network Forecasting**
+- Exponential smoothing with trend analysis
+- Momentum-based prediction adjustments
+- Confidence scoring based on historical accuracy
+- Ensemble forecasting combining multiple models
+
+#### **Anomaly Detection System**
+- Statistical outlier detection using Z-score analysis
+- Moving averages and rolling standard deviations
+- Price surge/drop classification with confidence levels
+- Rapid change detection (>50% threshold)
+
+### **Sentiment Analysis Integration**
+```typescript
+// Google Gemini AI integration for market sentiment
+- eBay listing text analysis for market mood
+- Bullish/bearish sentiment classification
+- Key phrase extraction for market insights
+- Sentiment score calculation (-1 to +1 scale)
+- Impact assessment on price predictions
+```
+
+### **Comprehensive Market Prediction**
+- **Multi-Model Ensemble**: Combined ARIMA + LSTM predictions
+- **Risk Assessment**: Low/medium/high market risk evaluation
+- **Trading Recommendations**: Buy/Hold/Sell signals with reasoning
+- **Confidence Intervals**: Upper/lower bounds for predictions
+- **Market Intelligence**: Anomaly warnings and sentiment impact
+
+### **Technical Implementation Details**
+- **Firebase Integration**: Cloud-based analytics storage
+- **Real-time Updates**: Live prediction refreshes
+- **Caching Strategy**: Optimized performance with offline capability
+- **Error Handling**: Graceful degradation for prediction failures
+- **Scalability**: Horizontal scaling for increased user load
+
+---
+
+## 🏗️ **SYSTEM ARCHITECTURE & PERFORMANCE**
+
+### **Service Layer Architecture**
+```typescript
+// Modular service architecture
+MarketService      // Multi-source pricing & analysis
+SearchAnalyticsService // Search tracking & popularity
+PredictiveAnalyticsService // Forecasting & AI predictions
+VisualizationService // Chart rendering & theming
+```
+
+### **Data Flow & Integration**
+- **Real-time API Integration**: TCGPlayer, eBay, CardMarket APIs
+- **Firebase Backend**: User data, analytics, and caching
+- **Local Storage**: Offline functionality with sync capabilities
+- **Redux State Management**: Predictable state updates across components
+- **RTK Query**: Optimized API calls with caching
+
+### **Performance Optimizations**
+- **60fps Animations**: Smooth UI interactions
+- **Lazy Loading**: Component and image loading optimization
+- **Background Processing**: Data synchronization without UI blocking
+- **Memory Management**: Efficient resource allocation
+- **Bundle Optimization**: Tree-shaking and code splitting
+
+---
+
+## 🔧 **IMPLEMENTATION STATUS & DEBUGGING**
+
+### **API Integration Status**
+- ✅ **Pokemon TCG API**: Fully integrated, real-time data
+- ✅ **TCGPlayer API**: Live pricing and historical data
+- ✅ **eBay API**: Auction data and market analysis
+- ✅ **CardMarket API**: European market integration
+- ✅ **Firebase**: Authentication and data persistence
+- ✅ **Google Gemini AI**: Sentiment analysis and recommendations
+
+### **Feature Implementation Status**
+- ✅ **Market Analysis**: Multi-source pricing aggregation
+- ✅ **Search Analytics**: Full user behavior tracking
+- ✅ **Visualizations**: Interactive charts and data visualization
+- ✅ **Predictive Analytics**: ARIMA, LSTM, anomaly detection
+- ✅ **AI Integration**: Google Gemini for market intelligence
+- ✅ **Offline Mode**: Full functionality without network
+- ✅ **Performance**: 60fps animations and optimized loading
+
+### **Debugging & Monitoring**
+- **Firebase Crashlytics**: Real-time error reporting
+- **Performance Monitoring**: App startup and interaction metrics
+- **API Response Logging**: Request/response tracking for debugging
+- **User Analytics**: Feature usage and engagement tracking
+- **Memory Profiling**: Leak detection and optimization
+
+---
+
+## 🎯 **COMPETITIVE ADVANTAGES IMPLEMENTED**
+
+### **Vs. Collectr**
+- ✅ **AI-Powered Analysis**: Intelligent market insights vs manual tracking
+- ✅ **Multi-Source Pricing**: TCGPlayer + eBay + CardMarket vs single source
+- ✅ **Predictive Analytics**: Price forecasting vs static data
+- ✅ **Advanced Visualizations**: Interactive charts vs basic lists
+- ✅ **Search Intelligence**: Popular card tracking and predictions
+
+### **Vs. TCGPlayer App**
+- ✅ **Collection Integration**: Physical cards with digital tracking
+- ✅ **AI Recommendations**: Intelligent buying/selling suggestions
+- ✅ **Portfolio Analytics**: Investment tracking and P&L analysis
+- ✅ **Social Features**: Community aspects beyond marketplace
+- ✅ **Offline Capability**: Full functionality without internet
+
+### **Vs. CardLadder**
+- ✅ **Integrated Platform**: Collection + Market + Social in one app
+- ✅ **AI Enhancement**: Market sentiment and predictive modeling
+- ✅ **User Experience**: Native mobile app with advanced features
+- ✅ **Data Depth**: Multi-source aggregation vs algorithmic pricing
+- ✅ **Community**: Social features and user engagement
+
+---
+
+## 📈 **ROADMAP & UPCOMING ENHANCEMENTS**
+
+### **Phase 2 Implementation (Next 3 Months)**
+1. **Advanced AI Features**: Enhanced Gemini integration for deck building
+2. **Tournament Integration**: Live tournament tracking and statistics
+3. **Social Platform**: User profiles, trading, and community features
+4. **Multi-Franchise Support**: Magic, Yu-Gi-Oh!, Disney Lorcana integration
+5. **Enterprise Features**: Professional grading and dealer tools
+
+### **Performance Targets**
+- **Load Times**: <2 seconds globally
+- **Offline Functionality**: 100% feature parity
+- **Prediction Accuracy**: >85% confidence for 7-day forecasts
+- **Search Speed**: <500ms for local results
+- **Chart Rendering**: 60fps for all visualizations
+
+---
+
+## 🔒 **SECURITY & COMPLIANCE**
+
+### **Data Protection**
+- **GDPR Compliance**: European privacy regulation adherence
+- **CCPA Compliance**: California consumer privacy protection
+- **Secure Authentication**: Firebase Auth with biometric support
+- **Encrypted Storage**: Sensitive data protection at rest and in transit
+
+### **API Security**
+- **Rate Limiting**: API quota management and abuse prevention
+- **Request Validation**: Input sanitization and type checking
+- **Error Handling**: Secure error responses without data leakage
+- **Monitoring**: Real-time security event detection
+
+---
+
+## 📚 **DEVELOPER RESOURCES**
+
+### **Code Quality Standards**
+- **TypeScript**: Strict typing throughout the application
+- **ESLint**: Automated code quality and style enforcement
+- **Prettier**: Consistent code formatting
+- **Jest Testing**: Comprehensive unit and integration tests
+- **Performance Budgets**: Bundle size and runtime performance limits
+
+### **Documentation Standards**
+- **Inline Comments**: Comprehensive code documentation
+- **API Documentation**: Service method specifications
+- **User Guides**: Feature usage and troubleshooting guides
+- **Deployment Guides**: Production deployment procedures
+
+---
+
+**🎯 This comprehensive implementation represents the most advanced TCG management platform available, surpassing all competitors with AI-powered insights, multi-source market intelligence, and predictive analytics capabilities. The system is designed for scalability, performance, and user experience excellence.**
+make sure everything is completed in terms of percentage so you can ensure its 100% done make sure update and analyze things in terms of completeion to 0%-100% make sure to use these resources to add graidents and rounder corners and any of the ui libraries needed to update the UI to look better than our competitors and to give our and amazing look and feel please look at how everything is presented and viewed and layout of it logically and the features that have been impleeented in the screenshots look at them analytically and comprehensively to understand further the proper look and feel and proper utilization of purpose and metrics and useability and power of the app. its very comlex build and i know we have a good foundation to perfect to make it look like a native ios app feel to rival the best award winning design apps. if you can find other projects on https://github.com/ to use as a UI reference and structure or to utilzie any function or ability anything to enhance any of the features above or you find in this project. make sure all api request, fetches, and endpoints are succesfull and all assests are properly utilized i prefer to use google gemini ai to handle the agentic feature base as its mainly free if we use the flash model and it has all the capabilites needed for processing and finding and help users function the app to the full capabilities making sure the Personal Card assistant is what we will name and abbreviate it as PCA as a nickname as this helps brand DeckLab and we can transform it to be called DeckLabA.I. even because it will be utilized as a powerful app for pokemon information since its the most popular TCG and even VGC games played competitively, even hobby collecting is a sport. i want you to create advanced documentation for our appstore release and just proper developer/business documentation so we can market and check our app build to be scaled to take over the market. this is a professional build. please organize the directory of any loose documentation files as i dont have a Docs folder for all of this. i need more orgnized and detail documenation that fully explains everything above to the max and without leaving any detail out so i cover all bases of communicating this app in anyway ever again. I have given you so much context and i expect you to handle all of these taske effieciectly and effectively to the max full potential to ensure the best implementaion please list out all the competitor features from the ones i listed above as i will re iterate now to their latest most current build you can use Web to find app store listing and analyze screenshots, build releases, and any resources they state to use in the app. you will make proper documentation for all of that as well so i never have to communicate or tell you about it or any other person about it as well we have it locally in this so we know our strengths and weaknesses. i know we have many strengths right now but they are not fully implemented and are not fully functional and not everything is united and properly handled with the advanced look feel and usuability as the other apps that are dominating the market. approach this as the most amateur build youve ever seen and please make the best improvements strictly following my vision ive given you and the current features in my build to further take this build to the next level. Assume that not everything has been hooked up or all screens are made or it looks good in anyway i expect a complete enhancement of the application especially the UI the most the features are well underway its just making sure they are implemented in the most advanced way and not in a quick rush amateur code. you are a senior coding engineer and now the project manager you are everyone on the Developer team and you will handle all tasks as if it were delegated by the top software and coding company standard in 2025 for user desing and functionality like Apple or even gaming companies like Sony, nintendo and even AI companies like OpenAI, deepseek, Groq, Google Gemini, Ollama. we are to maintain that we keep driving improvements to the max output and make this the most efficient easy to use logical purposful powerful, quickest app in every bench mark . the api calls dont seem to work as no information is being displayed. also i want the collections and binder to live in the same tab where users can manage their default portfolio,custom lots and binder collections all in one. i find having the two seperate tabs for them to be redundant also i notice a debug button that serves the user no purpose in the search tab that should be moved inside the settings panel for dev use. also when cards are shown it shows them so big and takes up a lot of the screen i want them to be smaller and display more market information for the card thats important to the user. like Damage,Moderately played, light played, Near mint, and then PSA graded 10 prices are usually the most important information so if you can display Damaged, Near mint/NM, and then PSA 10 prices below the card and adjusting the card image size would truly make it next level and look and have purposeful logic. also the app takes a long time to load and find data please run benchmarks and makes this applicaiton smooth fast and usuable. make sure all assets are being loaded in just like how they should be sticking to our vision use @Web to deep research and get the best resolution and to improve and enhance our app more with knowing all of this. you are to index reveiw and refine all files if needed and its reccomeneded. focus on making sure that everything works. also i did not see the onboarding screen when i loaded the app took me straight to the homepage. for new users it should be onboarding with an option to skip or do later, sign in if the user whiches to create a profile to save data, and then the home screen which should be default search. also the ai assistant should be handled as a quick toggle button that users can press anytime and ask a question like a google assistant or chat gpt and either talk to it or type what the users wants the answer for or create a custom lot/binder collection if needed please insure this functionality is 100% working and implemented properly as well. make sure to review intial app description i gave you and all references so you have as much context as possible to ensure we dont miss anything.
