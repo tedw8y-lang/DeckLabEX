@@ -7,7 +7,7 @@ import {
   FlatList,
   Text,
 } from 'react-native';
-import { Search as SearchIcon, Filter, X, Clock } from 'lucide-react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 interface SearchBarProps {
   value: string;
@@ -56,9 +56,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         onPress={() => handleSuggestionPress(item)}
       >
         {isRecent ? (
-          <Clock size={16} color="#666" />
+          <MaterialCommunityIcons name="clock" size={16} color="#666" />
         ) : (
-          <SearchIcon size={16} color="#666" />
+          <MaterialCommunityIcons name="magnify" size={16} color="#666" />
         )}
         <Text style={styles.suggestionText}>{item}</Text>
       </TouchableOpacity>
@@ -69,7 +69,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     <View style={styles.container}>
       <View style={styles.searchContainer}>
         <View style={[styles.inputContainer, isFocused && styles.inputFocused]}>
-          <SearchIcon size={20} color="#666" style={styles.searchIcon} />
+          <MaterialCommunityIcons name="magnify" size={20} color="#666" style={styles.searchIcon} />
           <TextInput
             ref={inputRef}
             style={styles.input}
@@ -83,14 +83,14 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           />
           {value.length > 0 && (
             <TouchableOpacity style={styles.clearButton} onPress={handleClear}>
-              <X size={16} color="#666" />
+              <MaterialCommunityIcons name="close" size={16} color="#666" />
             </TouchableOpacity>
           )}
         </View>
         
         {onFilterPress && (
           <TouchableOpacity style={styles.filterButton} onPress={onFilterPress}>
-            <Filter size={20} color="#FFD700" />
+            <MaterialCommunityIcons name="filter" size={20} color="#FFD700" />
           </TouchableOpacity>
         )}
       </View>
